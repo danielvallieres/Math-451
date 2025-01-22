@@ -1,0 +1,190 @@
+\documentclass[reqno]{amsart} 
+\usepackage{amssymb,latexsym,amsmath,amscd,graphicx,setspace,amsthm,verbatim,enumitem}
+\usepackage[margin = 3 cm]{geometry}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+      
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newenvironment{solution1}{\paragraph{\emph{Solution $1$}.}}{\hfill$\square$}
+\newenvironment{solution2}{\paragraph{\emph{Solution $2$}.}}{\hfill$\square$}
+\newenvironment{solution3}{\paragraph{\emph{Solution $3$}.}}{\hfill$\square$}
+
+\begin{document} 
+
+\title[Homework 1]{Homework 1}
+
+\date{\today} 
+\maketitle 
+
+Later on in this class, we will have to think about all the subgroups of a given finite group.  As a warm-up, work on the following problem.
+\begin{problem}
+Find all the subgroups of the Klein four group $V = \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$ and indicate which ones are normal subgroups.  Repeat the same exercise with $S_{3}$.
+\end{problem}
+
+\begin{solution1}
+
+\end{solution1}
+
+Groups acting on sets are ubiquitous in mathematics.  In Galois theory, we will have groups acting on the zeros of a given polynomials.  In graph theory, groups can act on the vertices of a graph, on the edges, etc...  The goal of the problems below is to become acquainted with this notion in mathematics.  {\bfseries I recommend that after each problem below, you play with the example contained in Problem $8$ where a concrete example is given.}  The setup is as follows:  One says that a group $G$ acts on a set $X$ from the left (or that $X$ is a left $G$-set) if we are given a function 
+$$\cdot:G \times X \mapsto X $$
+denoted by by $(\sigma,x) \mapsto \sigma \cdot x$ satisfying the following two properties:
+\begin{enumerate}[label=(\alph*)]
+\item $1_{G} \cdot x = x$ for all $x \in X$,
+\item $\sigma_{1} \cdot (\sigma_{2} \cdot x) = (\sigma_{1} \cdot \sigma_{2}) \cdot x$ for all $\sigma_{1}, \sigma_{2} \in G$ and for all $x \in X$.
+\end{enumerate}
+Pay attention to the meaning of the dot!!!  In the second condition above, the dot has two different meanings... (There is also a notion of right action, but don't worry about this for now.)  For the following problem, recall that if $X$ is a set, then ${\rm Sym}(X)$ denotes the group of bijections from $X$ to $X$ with the group operation being composition of functions.
+\begin{problem}
+Let $X$ be a left $G$-set, and define a function $\rho:G \rightarrow {\rm Sym}(X)$ via
+$$\sigma \mapsto \rho(\sigma), $$
+where $\rho(\sigma):X \rightarrow X$ is the function defined via $\rho(\sigma)(x) = \sigma \cdot x$.
+\begin{enumerate}[label=(\alph*)]
+\item Show that for all $\sigma \in G$, the function $\rho(\sigma)$ is a bijection from $X$ to $X$, so that $\rho(\sigma)$ really is an element of ${\rm Sym}(X)$,
+\item Show that the function $\rho:G \rightarrow {\rm Sym}(X)$ is a group morphism.
+\end{enumerate}
+\end{problem}
+
+\begin{solution1}
+
+\end{solution1}
+
+
+
+\begin{problem}
+Conversely, start with a group morphism $\rho:G \rightarrow {\rm Sym}(X)$, and define 
+$$\cdot : G \times X \rightarrow X $$
+via $(\sigma,x) \mapsto \sigma \cdot x = \rho(\sigma)(x)$.  Show that this last function satisfies the two defining properties of a left $G$-set listed above just before Problem $2$.
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+The upshot of the last two problems is that there are two different ways of thinking about a left $G$-set:  Either as a function $\cdot:G\times X \rightarrow X$ satisfying the two properties above or simply as a group morphism $G \rightarrow {\rm Sym}(X)$.  
+
+\begin{problem}
+Let $X$ be a left $G$-set.  Define a relation $\sim$ on $X$ via
+$$x_{1} \sim x_{2} $$
+if there exists $\sigma \in G$ such that $\sigma \cdot x_{1} = x_{2}$.  Show that this relation $\sim$ is an equivalence relation on $X$.
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+The equivalence classes for the equivalence relation defined above are called \emph{orbits}.  In this situation, one writes $O_{x}$ instead of $[x]$ for the equivalence class of $x$, and such an equivalence class $O_{x}$ is called the orbit of $x$.  The collection of all orbits is denoted by $G \backslash X$.  Recall that the equivalence classes for any equivalence relation on a set $X$ gives a partition of $X$.  Therefore, if $X$ is a \emph{finite} left $G$-set, then we have in particular
+\begin{equation} \label{card_X}
+\# X = \sum_{O \in G \backslash X}\#O.
+\end{equation}
+
+
+\begin{problem}
+Let $X$ be a left $G$-set, and let $x \in X$.  One defines
+$$G_{x} = \{ \sigma \in G : \sigma \cdot x = x\} \subseteq G. $$
+Show that $G_{x} \le G$.
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+The subgroup $G_{x}$ defined above is called the \emph{stabilizer} of $x$.  In general, it is not a normal subgroup of $G$.  For the problem below, recall that if $H \le G$, where $G$ is a group, then we have the collection of left cosets $G/H$.
+
+
+\begin{problem}
+Let $X$ be a left $G$-set and let $x \in X$.  Define a function 
+$$f:G/G_{x} \rightarrow O_{x}$$ 
+via $\sigma G_{x} \mapsto \sigma \cdot x$.  
+\begin{enumerate}[label=(\alph*)]
+\item Show first that this function is \emph{well-defined} meaning that it does not depend on the choice of the representatives $\sigma$ for the coset $\sigma G_{x}$ used to defined the function $f$.
+\item Show that $f$ is a bijection.
+\end{enumerate}
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+It follows from the last problem that if $G$ is a \emph{finite} group and $X$ is a \emph{finite} set, then
+\begin{equation} \label{orbits_vs_index}
+(G:G_{x}) = \# O_{x}, 
+\end{equation}
+where recall that $(G:H)$ denotes the index of a subgroup $H$ in $G$, i.e. the number of left cosets (or the number of right cosets since those two numbers are the same).  A left $G$-set is called \emph{free} (or $G$ is said to act \emph{freely} on $X$) if all stabilizers are trivial, i.e.
+$$G_{x} = \{1_{G} \} $$
+for all $x \in X$.  In the situation where $X$ is a \emph{finite free} left $G$-set and $G$ is a finite group, combining (\ref{card_X}) and (\ref{orbits_vs_index}) gives
+\begin{equation} \label{class_eq}
+\# X = \# G \backslash X \cdot \# G,
+\end{equation}
+i.e. the cardinality of $X$ is the number of orbits times the cardinality of $G$.  Does this last equation ring a bell with an important theorem from group theory???????????  If you are thinking about Lagrange's theorem you are absolutely right, so that you can think of this equation as a generalization of Lagrange's theorem.  (Recall also that Lagrange's theorem is a generalization of Euler's theorem in number theory which, in turn, is a generalization of Fermat's little theorem.)  We explain this in the following problem:
+
+\begin{problem}
+Let $G$ be a group and let $H \le G$.  Define a function 
+$$\cdot: H \times G \rightarrow G $$
+via $(h,\sigma) \mapsto h \cdot \sigma = h \sigma$, where the no dot between $h$ and $g$ means the group operation coming from $G$.
+\begin{enumerate}[label=(\alph*)]
+\item Show that this function above makes $G$ into a left $H$-set.  (In our previous discussion, $G$ would be the set $X$ and $H$ the group $G$.)
+\item Show that $O_{\sigma} = H\sigma$, i.e. that the orbits are simply the right cosets for $H$.
+\item Show that this left $H$-set is free.
+\item Show that when $G$ is finite, (\ref{class_eq}) above gives us back Lagrange's theorem, i.e.
+$$\# G = (G:H) \cdot \#H. $$
+\end{enumerate}
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+Note also that in the previous problem, we could have taken $H = G$ and view $G$ as a left $G$-set.  Convince yourself that the associated group morphism
+\begin{equation} \label{cayley}
+\rho:G \rightarrow {\rm Sym}(G) 
+\end{equation}
+from Problem $2$ above is \emph{injective}, and then remind yourself about how we proved Cayley's theorem last semester...(Recall that Cayley's theorem is the claim that any finite group $G$ is isomorphic to a subgroup of $S_{n}$, where $n = \# G$.)
+
+\begin{problem}
+There are many many examples of group actions in mathematics.  But here is one so that you have a concrete example to work with.  Consider the dihedral group $D_{8}$.  Recall that we defined $D_{8}$ to be the subgroup of the isometry group of the euclidean plane that maps a square with vertices at $p_{1} = (1,0), p_{2} = (0,1), p_{3} = (-1,0), p_{4} = (0,-1)$ to itself.  Let's name the elements of $D_{8}$ as follows:
+$$D_{8} = \{{\rm id}, r, r^{2}, r^{3}, \tau_{1}, \tau_{2}, \tau_{3}, \tau_{4} \}, $$
+where $r$ is the counterclockwise rotation by $\pi/2$ radians, $\tau_{1}$ the reflection about the $y$-axis, $\tau_{2}$ the reflection about the $x$-axis, $\tau_{3}$ the reflection about the diagonal line of equation $y=x$, and $\tau_{4}$ the reflection about the diagonal line of equation $y = -x$.  Let $X$ be the set of vertices of the square, that is
+$$X = \{p_{1},p_{2},p_{3},p_{4} \}. $$
+Answer the following questions:
+\begin{enumerate}[label=(\alph*)]
+\item Show that the function 
+$$\cdot: D_{8} \times X \rightarrow X$$ 
+given by $(\sigma,x) \mapsto \sigma \cdot x = \sigma(x)$ satisfies the two defining properties of a left $D_{8}$-set listed just before Problem $2$.  The problems below are all about this left $D_{8}$-set.
+\item Consider now the group morphism $\rho: D_{8} \rightarrow {\rm Sym}(X)$ from Problems $1$ and $2$.  Tell me what $\rho(r)(x)$ is as $x$ varies over all the elements of $X$.  (On a separate piece of paper, you could visualize this function $\rho(r):X \rightarrow X$ by drawing a little diagram with the domain, codomain, and some arrows.)  Repeat with $\rho(\tau_{2})$.
+\item Find all the orbits for this left $D_{8}$-set.  What is $\# D_{8} \backslash X$ (i.e. how many orbits are there)?
+\item Find the stabilizer of $x_{1}$ then the stabilizer of $x_{2}$, and verify the equality (\ref{orbits_vs_index}) for this particular left action and for both $x_{1}$ and $x_{2}$.
+\item Is the stabilizer of $x_{1}$ a normal subgroup of $D_{8}$?  Explain.
+\item Is this $D_{8}$-set free?  Explain.
+\item Do we have the equality
+$$\# X = \# D_{8} \backslash X \cdot \# D_{8}?? $$
+Does that contradict (\ref{class_eq}) above?  Explain.
+\end{enumerate}
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+Here is a bit more terminology.  A left $G$-set $X$ is called \emph{transitive} if for all $x_{1}, x_{2} \in X$, there exists $\sigma \in G$ such that $\sigma \cdot x_{1} = x_{2}$.  Another way of saying this is that there is only one orbit.  Thus the left $D_{8}$-set from the previous problem is a transitive one.  Moreover, a left $G$-set $X$ is called \emph{faithful} if the associated group morphism
+$$\rho:G \rightarrow {\rm Sym}(X) $$
+is injective.  We already saw one example of a left faithful $G$-set, namely $G$ itself viewed as a left $G$-set because of (\ref{cayley}) above.
+\begin{problem}
+\hspace{1cm}
+\begin{enumerate}[label=(\alph*)]
+\item Is the left $D_{8}$-set $X$ from the previous problem faithful??
+\item Show that a free left $G$-set is necessarily faithful.
+\item What about the converse?  Is a faithful left $G$-set necessarily free???
+\end{enumerate}
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+
+\end{document} 
+
+
+
