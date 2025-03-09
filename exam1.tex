@@ -1,0 +1,122 @@
+\documentclass[reqno]{amsart} 
+\usepackage{amssymb,latexsym,amsmath,amscd,graphicx,setspace,amsthm,verbatim}
+\usepackage[margin = 3 cm]{geometry}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+      
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newenvironment{solution}{\paragraph{\emph{Solution}.}}{\hfill$\square$}
+
+
+\newenvironment{solution1}{\paragraph{\emph{Solution $1$}.}}{\hfill$\square$}
+\newenvironment{solution2}{\paragraph{\emph{Solution $2$}.}}{\hfill$\square$}
+\newenvironment{solution3}{\paragraph{\emph{Solution $3$}.}}{\hfill$\square$}
+
+\begin{document} 
+
+\title[Exam 1]{Exam 1}
+
+\date{\today} 
+\maketitle 
+
+
+
+
+\begin{problem}
+Let $m,n$ be nonnegative integers.  In a previous homework assignment, you showed that the sum of two ideals is an ideal.  Show that
+$$m\mathbb{Z} + n\mathbb{Z} = d\mathbb{Z}, $$
+where $d = {\rm gcd}(m,n)$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+
+\begin{problem}
+Let $R$ be a commutative ring, and let $\alpha \in R$.  Show that the function
+$${\rm ev}_{\alpha}:R[T] \rightarrow R $$
+defined via $P \mapsto {\rm ev}_{\alpha}(P):= a_{n}\alpha^{n} + a_{n-1}\alpha^{n-1} + \ldots + a_{0}$ if 
+$$P = a_{n}T^{n} + a_{n-1}T^{n-1} + \ldots + a_{0}$$ 
+if a ring morphism.  (It is a very important ring morphism called the evaluation map.  The element ${\rm ev}_{\alpha}(P) \in R$ is often denoted by $P(\alpha)$.)
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+
+\begin{problem}
+Let $R$ be a commutative ring and let $I \unlhd R$.
+\begin{enumerate}
+\item Let $J \unlhd R$ be such that $I \subseteq J \subseteq R$.  Show that
+$$J/I :=\{j + I : j \in J\} \unlhd R/I. $$
+\item Conversely, let $I_{0} \unlhd R/I$.  Show that there exists $J \unlhd R$ satisfying $I \subseteq J \subseteq R$ for which
+$$I_{0} = J/I. $$
+(Hint:  Consider the natural projection map $\pi:R \rightarrow R/I$, and pull-back the ideal $I_{0}$...)
+\item Show the correspondence theorem:  Given a commutative ring $R$ and an ideal $I$, there is a one-to-one correspondence between ideals of $R$ containing $I$ and ideals of $R/I$.
+\item Show that for any positive integer $n$, the ring $\mathbb{Z}/n\mathbb{Z}$ is a principal ring.  Is it a principal ideal domain in general??
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}
+Let $R$ be an integral domain, and let
+$$\Omega = \{(a,b) \in R^{2} : b \neq 0 \}. $$
+\begin{enumerate}
+\item Define a relation on $\Omega$ via $(a,b) \sim (c,d)$ if $ad = bc$.  Show that this relation is an equivalence relation on $\Omega$.
+\item Consider the collection of equivalence classes $\Omega/\sim$.  Given $[(a,b)], [(c,d)] \in \Omega/\sim$, define
+$$[(a,b)] + [(c,d)] = [(ad + bc, bd)]. $$
+Show that this binary operation is well-defined.
+\item Consider the collection of equivalence classes $\Omega/\sim$.  Given $[(a,b)], [(c,d)] \in \Omega/\sim$, define
+$$[(a,b)] \cdot [(c,d)] = [(ac,bd)]. $$
+Show that this binary operation is well-defined.
+\item Show carefully and in full details that $\Omega/\sim$ with the two binary operations above is a field.  This field is denoted by ${\rm Frac}(R)$, and is called the fraction field of the integral domain $R$.
+\item Do you recognize ${\rm Frac}(\mathbb{Z})$???
+\end{enumerate}
+
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}
+Consider the integral domain $\mathcal{G} = \{ a+ib : a, b \in \mathbb{Z}\}$.  Given $z = a + ib \in \mathcal{G}$, define the norm map $N$ via
+$$N(z) := |z|^{2} = a^{2} + b^{2}. $$
+Note that the function $N$ satisfies $N(z_{1}z_{2}) = N(z_{1})N(z_{2})$.
+\begin{enumerate}
+\item Let $z \in \mathcal{G}$.  Show that $z \in \mathcal{G}^{\times}$ if and only if $N(z) = 1$.
+\item Let $z \in \mathcal{G}$.  Show that if $N(z)$ is a prime in $\mathbb{Z}$, then $z$ is irreducible in $\mathcal{G}$.
+\item Is $5$ an irreducible element in $\mathcal{G}$?  Explain.
+\item Is $3$ an irreducible element in $\mathcal{G}$?  Explain.
+\item Is $1 + 2i$ an irreducible element in $\mathcal{G}$?  Explain.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+
+
+
+
+
+\end{document} 
+
+
+
