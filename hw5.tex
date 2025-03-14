@@ -1,0 +1,174 @@
+\documentclass[reqno]{amsart} 
+\usepackage{amssymb,latexsym,amsmath,amscd,graphicx,setspace,amsthm,verbatim}
+\usepackage[margin = 3 cm]{geometry}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+      
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newenvironment{solution}{\paragraph{\emph{Solution}.}}{\hfill$\square$}
+
+
+\newenvironment{solution1}{\paragraph{\emph{Solution $1$}.}}{\hfill$\square$}
+\newenvironment{solution2}{\paragraph{\emph{Solution $2$}.}}{\hfill$\square$}
+\newenvironment{solution3}{\paragraph{\emph{Solution $3$}.}}{\hfill$\square$}
+
+\begin{document} 
+
+\title[Homework 5]{Homework 5}
+
+\date{\today} 
+\maketitle 
+
+
+\begin{problem}
+Let $R$ be a commutative ring.  Define a relation on $R$ via $a \sim b$ if there exists $u \in R^{\times}$ such that $a = ub$.  Show that this relation is an equivalence relation on $R$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Show that a ring morphism $\phi:F_{1} \rightarrow F_{2}$, where $F_{1}$ and $F_{2}$ are fields, is necessarily injective.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+In the first take-home exam, you showed how to start with an integral domain $R$, and construct its field of fractions, denoted by ${\rm Frac}(R)$.  An equivalence class $[(a,b)] \in {\rm Frac}(R)$ is usually denoted by
+$$\frac{a}{b}. $$
+\begin{enumerate}
+\item Show that the function $\iota:R \rightarrow {\rm Frac}(R)$ defined via
+$$r \mapsto \iota(r) = \frac{r}{1} $$
+is an injective ring morphism.
+\item Show that given any injective ring morphism $\phi:R \rightarrow F$, where $F$ is a field, there exists a unique ring morphism $\psi:{\rm Frac}(R) \rightarrow F$ such that $\psi \circ \iota = \phi$.  (In other words, ${\rm Frac}(R)$ is the ``smallest'' field containing $R$.  Think about that carefully...) (Hint:  Define $\psi$ via $a/b \mapsto \psi(a/b) = \phi(a)\phi(b)^{-1}$...show $\psi$ is well-defined and has the required properties...)
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+What do you think ${\rm Frac}(\mathcal{G})$ is?  Why?
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Let 
+$$P = a_{n}T^{n} + a_{n-1}T^{n-1}+ \ldots + a_{0} \in \mathbb{Z}[T], $$
+where $a_{n} \neq 0$.  Prove that if $P(r/s) = 0$, where ${\rm gcd}(r,s)=1$, then $r \mid a_{0}$ and $s \mid a_{n}$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+After Spring Break, we are going to need a few results from Linear Algebra.  I encourage you to read Chapter 20 in Abstract Algebra by Thomas W. Judson, which is freely available online.  You can also try the hw problems in that Chapter.  Make sure you review the axioms defining a vector space over a field $F$.  (In Math 235, the field $F$ was probably $\mathbb{R}$ or $\mathbb{C}$, but everything you did prior to eigenvalues can be done over an arbitrary field, and this will be important for us in Math 451.)  The following definitions are very important, and they are all in Chapter 20 of Judson's book.
+
+\begin{definition}
+Let $V$ be a vector space over a field $F$, and let $v_{1},\ldots,v_{n} \in V$.  A \emph{linear combination} of the vectors $v_{1},\ldots,v_{n}$ is another vector of the form
+$$\lambda_{1}v_{1} + \ldots + \lambda_{n}v_{n} $$
+for some $\lambda_{i} \in F$.
+\end{definition}
+For instance, if in $\mathbb{V}^{3}(\mathbb{R})$ (I like to denote $\mathbb{V}^{n}(F) = F^{n}$, when I think about the elements of $F^{n}$ as vectors...), one considers the vector $v = \langle 2,3,4 \rangle$, then 
+$$ v = 2 i + 3 j + 4 k$$
+so that $v$ is a linear combination of the three vectors $i = \langle 1,0,0\rangle, j = \langle 0,1,0 \rangle, k = \langle 0,0,1 \rangle$.
+
+\begin{definition}
+Let $V$ be a vector space over $F$.  The vectors $v_{1},\ldots,v_{n} \in V$ are called \emph{linearly independent} over $F$ if whenever one has
+$$\lambda_{1}v_{1} + \ldots + \lambda_{n}v_{n} = 0 $$
+for some $\lambda_{i} \in F$, then 
+$$\lambda_{1} = \ldots = \lambda_{n}= 0. $$
+Otherwise, the vectors $v_{1},\ldots,v_{n}$ are called \emph{linearly dependent} over $F$.  In other words, the vectors $v_{1},\ldots,v_{n}$ are linearly dependent over $F$ if there exists scalars $\lambda_{1},\ldots,\lambda_{n} \in F$, \emph{not all zero}, such that
+$$\lambda_{1}v_{1}+\ldots+\lambda_{n}v_{n} = 0. $$
+\end{definition}
+For instance, the vectors $i,j,k \in \mathbb{V}^{3}(\mathbb{R})$ are linearly independent over $\mathbb{R}$, but the vectors $\langle 1,1,1 \rangle$ and $\langle 2,2,2 \rangle$ are not.  
+
+\begin{definition}
+Let $V$ be a vector space over $F$.  The vectors $v_{1},\ldots,v_{n} \in V$ form a \emph{spanning set} for $V$ if every vector $v \in V$ can be written as a linear combination of the vectors $v_{1},\ldots,v_{n}$.  In this case, one writes
+$$V = {\rm Span}_{\mathbb{F}}(v_{1},\ldots,v_{n}). $$
+\end{definition}
+
+For instance, 
+$$\mathbb{V}^{3}(\mathbb{R}) = {\rm Span}_{\mathbb{R}}(i,j,k) = {\rm Span}_{\mathbb{R}}(i,j,k,\langle 1,2,3 \rangle),$$
+but
+$$\mathbb{V}^{3}(\mathbb{R}) \neq {\rm Span}_{\mathbb{R}}(i,j). $$
+
+\begin{definition}
+Let $V$ be a vector space over $F$.  A collection of vectors $v_{1},\ldots,v_{n}$ is called a \emph{basis} for $V$ over $F$ if the following two conditions are satisfied:
+\begin{enumerate}
+\item The vectors $v_{1},\ldots,v_{n}$ are linearly independent over $F$.
+\item One has $V = {\rm Span}_{F}(v_{1},\ldots,v_{n})$.
+\end{enumerate}
+A big result in linear algebra is that, although a basis is not unique, the \emph{number of vectors} in a basis is independent of the basis.  This number is called the \emph{dimension} of $V$, and is denoted by
+$${\rm dim}_{F}(V). $$
+\end{definition}
+
+\begin{problem}
+Let $V$ be a vector space over $F$ and let $S = \{v_{1},\ldots,v_{n} \}$ a subset of $V$ which is linearly independent over $F$.  Prove that every vector in the span of $S$ can be \emph{uniquely} written as a linear combination of vectors of $S$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Show that if $S_{1}, S_{2}$ are finite subsets of a $F$-vector space $V$ such that $S_{1} \subseteq S_{2}$, then ${\rm Span}_{F}(S_{1}) \subseteq {\rm Span}_{F}(S_{2})$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Let $v_{1}$ and $v_{2}$ be distinct vectors in a $F$-vector space $V$.  Show that $v_{1},v_{2}$ are linearly dependent if and only if $v_{1}$ or $v_{2}$ is a multiple of the other.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Let $S=\{v_{1},\ldots,v_{n} \}$ be a linearly independent subset of a vector space over $\mathbb{F}_{2}$.  How many vectors are there in ${\rm Span}(S)$???
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}
+Let $S = \{v_{1},\ldots,v_{n} \}$ be a set of vectors in the $F$-vector space $V$.  Prove that $S$ is linearly dependent if and only if $v_{1} = 0$ or $v_{k+1} \in {\rm Span}_{F}(\{v_{1},\ldots,v_{k} \})$ for some $k \in \{1,\ldots,n-1 \}$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Give three different bases for $\mathbb{V}^{3}(\mathbb{R})$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Let $v_{1}$ and $v_{2}$ be distinct vectors of a vector space $V$.  Show that if $\{v_{1},v_{2} \}$ is a basis for $V$ and $\lambda_{1},\lambda_{2}$ are nonzero scalars, then both $\{v_{1}+v_{2},\lambda_{1}v_{1} \}$ and $\{\lambda_{1}v_{1},\lambda_{2}v_{2} \}$ are also bases for $V$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+
+
+\end{document} 
+
+
+
