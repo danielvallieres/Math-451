@@ -1,0 +1,116 @@
+\documentclass[reqno]{amsart} 
+\usepackage{amssymb,latexsym,amsmath,amscd,graphicx,setspace,amsthm,verbatim}
+\usepackage[margin = 3 cm]{geometry}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+      
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newenvironment{solution}{\paragraph{\emph{Solution}.}}{\hfill$\square$}
+
+
+\newenvironment{solution1}{\paragraph{\emph{Solution $1$}.}}{\hfill$\square$}
+\newenvironment{solution2}{\paragraph{\emph{Solution $2$}.}}{\hfill$\square$}
+\newenvironment{solution3}{\paragraph{\emph{Solution $3$}.}}{\hfill$\square$}
+
+\begin{document} 
+
+\title[Homework 5]{Homework 5}
+
+\date{\today} 
+\maketitle 
+
+
+\begin{problem}
+In the first take-home exam, you showed how to start with an integral domain $R$, and construct its field of fractions, denoted by ${\rm Frac}(R)$.  An equivalence class $[(a,b)] \in {\rm Frac}(R)$ is usually denoted by
+$$\frac{a}{b}. $$
+\begin{enumerate}
+\item Show that the function $\iota:R \rightarrow {\rm Frac}(R)$ defined via
+$$r \mapsto \iota(r) = \frac{r}{1} $$
+is an injective ring morphism.
+\item Show that given any injective ring morphism $\phi:R \rightarrow F$, where $F$ is a field, there exists a unique ring morphism $\psi:{\rm Frac}(R) \rightarrow F$ such that $\psi \circ \iota = \phi$.  (In other words, ${\rm Frac}(R)$ is the ``smallest'' field containing $R$.  Think about that carefully...) (Hint:  Define $\psi$ via $a/b \mapsto \psi(a/b) = \phi(a)\phi(b)^{-1}$...show $\psi$ is well-defined and has the required properties...)
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+
+\begin{problem}
+Explain carefully why 
+$${\rm Frac}(\mathcal{G}) \simeq \mathbb{Q}(i). $$
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+
+\begin{problem}
+Let $R$ be a commutative ring.
+\begin{enumerate}
+\item Show carefully that $\varphi:\mathbb{Z} \rightarrow R$ defined via $n \mapsto \varphi(n) = n \cdot 1_{R}$ is a ring morphism.
+\item Show carefully that 
+$${\rm ker}(\varphi) = m\mathbb{Z}, $$
+where $m = {\rm char}(R)$.
+\item Deduce from Noether's isomorphism theorem that $R$ contains an isomorphic copy of the ring $\mathbb{Z}/{\rm char}(R)\mathbb{Z}$.
+\item Explain carefully why the characteristic of an integral domain is either $0$ or a prime number.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+
+\begin{problem}
+Find all irreducible polynomials of degree two or three in $\mathbb{F}_{3}[T]$.
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+
+\begin{problem}
+Show carefully that
+$$\mathbb{Q}(\sqrt{3},\sqrt{5}) = \mathbb{Q}(\sqrt{3} + \sqrt{5}). $$
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+
+\begin{problem}
+A complex number $z \in \mathbb{C}$ is called algebraic over $\mathbb{Q}$ if there exists $P \in \mathbb{Q}[T]$ such that $P \neq 0$, and $P(z) = 0$.  Show that the numbers
+$$\sqrt{3 + \sqrt{5}} \text{ and } \sqrt{3} + \sqrt{2}i$$
+are algebraic over $\mathbb{Q}$.
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+
+\begin{problem}
+Consider the polynomial 
+$$P = T^{3} - 2 \in \mathbb{Q}[T]. $$
+\begin{enumerate}
+\item Is $P$ irreducible in $\mathbb{Q}[T]$?  Why?
+\item Does the field $\mathbb{Q}(\sqrt[3]{2})$ contains {\bfseries all} the roots of $P$??  How many roots of $P$ does $\mathbb{Q}(\sqrt[3]{2})$ contain?
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+
+
+
+
+
+
+
+
+\end{document} 
+
+
+
