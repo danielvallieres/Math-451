@@ -1,0 +1,128 @@
+\documentclass[reqno]{amsart} 
+\usepackage{amssymb,latexsym,amsmath,amscd,graphicx,setspace,amsthm,verbatim}
+\usepackage[margin = 3 cm]{geometry}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+      
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newenvironment{solution}{\paragraph{\emph{Solution}.}}{\hfill$\square$}
+
+
+\newenvironment{solution1}{\paragraph{\emph{Solution $1$}.}}{\hfill$\square$}
+\newenvironment{solution2}{\paragraph{\emph{Solution $2$}.}}{\hfill$\square$}
+\newenvironment{solution3}{\paragraph{\emph{Solution $3$}.}}{\hfill$\square$}
+
+\begin{document} 
+
+\title[Exam 2]{Exam 2}
+
+\date{\today} 
+\maketitle 
+
+
+\begin{problem}
+Consider the field $\mathbb{Q}(\sqrt{2},\sqrt[3]{2})$.
+\begin{enumerate}
+\item What is $[\mathbb{Q}(\sqrt{2},\sqrt[3]{2}):\mathbb{Q}]$, and why?
+\item Give me a $\mathbb{Q}$-basis for the $\mathbb{Q}$-vector space $\mathbb{Q}(\sqrt{2},\sqrt[3]{2})$.  Explain how you found it.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Consider the field extension $\mathbb{Q}(\sqrt{2 + \sqrt{2}})/\mathbb{Q}$, and for simplicity, let $\alpha = \sqrt{2 + \sqrt{2}}$.
+\begin{enumerate}
+\item Explain why $\mathbb{Q}(\sqrt{2}) \subseteq \mathbb{Q}(\alpha)$.
+\item Find a monic polynomial $P \in \mathbb{Q}[T]$ of degree $4$ such that $P(\alpha) = 0$.
+\item Show that the polynomial $P$ you found in the previous problem is irreducible over $\mathbb{Q}$.  (Try to do this by hand...but if you get stuck, then you can use SageMath.)
+\item Deduce that $P = {\rm min}_{\mathbb{Q}}(\alpha)$.
+\item Find all the roots of the polynomial $P$.  (The shape of the polynomial should allow you to do so.)
+\item One of the roots you found in the previous problem should be $\beta = \sqrt{2 - \sqrt{2}}$.  Show that
+$$\alpha \beta = \sqrt{2}. $$
+\item Use the previous problem to show that {\bfseries all} roots of $P$ are in $\mathbb{Q}(\alpha)$.
+\item Now, I will help you out to show {\bfseries without calculations} that there is an automorphism 
+$$\mathbb{Q}(\alpha) \rightarrow \mathbb{Q}(\alpha)$$
+in ${\rm Aut}(\mathbb{Q}(\alpha)/\mathbb{Q})$ that satisfies $\alpha \mapsto \beta$.  
+\begin{enumerate}
+\item By your work above, you know that $\beta \in \mathbb{Q}(\alpha)$, therefore the evaluation map ${\rm ev}_{\beta}$ induces via Noether's first isomorphism theorem a field isomorphism
+$${\rm ev}_{\beta}:\mathbb{Q}[T]/({\rm min}_{\mathbb{Q}}(\beta)) \stackrel{\simeq}{\longrightarrow} \mathbb{Q}(\beta) \subseteq \mathbb{Q}(\alpha). $$
+Similarly, the evaluation map ${\rm ev}_{\alpha}$ induces a field isomorphism
+$${\rm ev}_{\alpha}:\mathbb{Q}[T]/({\rm min}_{\mathbb{Q}}(\alpha)) \stackrel{\simeq}{\longrightarrow} \mathbb{Q}(\alpha). $$
+Explain why ${\rm min}_{\mathbb{Q}}(\beta) = {\rm min}_{\mathbb{Q}}(\alpha)$.  
+\item Then, explain why 
+$$\sigma = {\rm ev}_{\beta} \circ {\rm ev}_{\alpha}^{-1} $$
+is a field isomorphism from $\mathbb{Q}(\alpha)$ to $\mathbb{Q}(\beta)$ that maps $\alpha$ to $\beta$ and that fixes $\mathbb{Q}$ pointwise.
+\item What is $[\mathbb{Q}(\beta):\mathbb{Q}]$, and why?
+\item Deduce that $[\mathbb{Q}(\alpha):\mathbb{Q}(\beta)] = 1$ and that $\mathbb{Q}(\beta) = \mathbb{Q}(\alpha)$.  It then follows that
+$$\sigma \in {\rm Aut}(\mathbb{Q}(\alpha)/\mathbb{Q}). $$
+\end{enumerate}
+\item Explain now why $\sigma(\sqrt{2}) = -\sqrt{2}$, where $\sigma$ is the field automorphism of the previous problem.
+\item Using the identity $\alpha \beta = \sqrt{2}$ from above, calculate
+$$\sigma \circ \sigma(\alpha), \sigma \circ \sigma \circ \sigma(\alpha), \text{ and } \sigma \circ \sigma \circ \sigma \circ \sigma(\alpha) $$
+\item Deduce from this last calculation what the order of $\sigma$ is in ${\rm Aut}(\mathbb{Q}(\alpha)/\mathbb{Q})$.
+\item What is the cardinality of ${\rm Aut}(\mathbb{Q}(\alpha)/\mathbb{Q})$?
+\item Do you recognize this group?  (That is, it is isomorphic to a common group with small order...which one??)
+
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Consider 
+$$\zeta_{7} = {\rm exp}(2 \pi i/7) $$
+and let
+$$\omega = \zeta + \zeta^{-1} = 2\cos(2\pi/7), $$
+where from now on, we write $\zeta$ instead of $\zeta_{7}$ to simplify the notation.  
+\begin{enumerate}
+\item Explain why $\zeta$ is algebraic over $\mathbb{Q}$.
+\item Show the polynomial identity
+$$T^{7} - 1 = (T - 1)(1 + T + \ldots + T^{6}). $$
+\item Explain why
+$$1 + \zeta + \zeta^{2} + \ldots + \zeta^{6} = 0. $$
+\item Show that
+$$\omega = \zeta + \zeta^{6}, \omega^{2} = \zeta^{2} + \zeta^{5} + 2, \text{ and } \omega^{3} = \zeta^{3} + \zeta^{4} + 3\omega. $$
+\item Deduce that
+$$\omega + \omega^{2} + \omega^{3} = 3\omega + 1. $$
+\item Find a monic polynomial $P$ of degree $3$ in $\mathbb{Q}[T]$ such that $P(\omega) = 0$.
+\item Using Problem $5$ of Homework $5$ (the unique optional one...), explain why the polynomial $P$ you found is irreducible over $\mathbb{Q}$. 
+\item Deduce that $P = {\rm min}_{\mathbb{Q}}(\omega)$.
+\item Show that
+$$\omega_{2} = \zeta^{2} + \zeta^{-2} \text{ and } \omega_{3} = \zeta^{3} + \zeta^{-3} $$
+are the two other roots of $P$.
+\item Are $\omega_{2}, \omega_{3} \in \mathbb{Q}(\omega)$???  Explain why.
+\item What is $[\mathbb{Q}(\omega):\mathbb{Q}]$? 
+\item What is the cardinality of ${\rm Aut}(\mathbb{Q}(\omega)/\mathbb{Q})$?  List all of the automorphisms in this group, and explain why they are field automorphisms.  (The strategy used in Problem $2$ might be handy here again...)
+\item Do you recognize this group?  (That is, it is isomorphic to a common group with small order...which one??)
+\item (Optional)  If you have energy left, try to find the roots of $P$ using Cardano's formula...(just for fun really...I haven't done it myself...)
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+
+
+
+
+
+
+
+\end{document} 
+
+
+
