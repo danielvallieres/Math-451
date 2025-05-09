@@ -1,0 +1,77 @@
+\documentclass[reqno]{amsart} 
+\usepackage{amssymb,latexsym,amsmath,amscd,graphicx,setspace,amsthm,verbatim}
+\usepackage[margin = 3 cm]{geometry}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+      
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newenvironment{solution}{\paragraph{\emph{Solution}.}}{\hfill$\square$}
+
+
+\newenvironment{solution1}{\paragraph{\emph{Solution $1$}.}}{\hfill$\square$}
+\newenvironment{solution2}{\paragraph{\emph{Solution $2$}.}}{\hfill$\square$}
+\newenvironment{solution3}{\paragraph{\emph{Solution $3$}.}}{\hfill$\square$}
+
+\begin{document} 
+
+\title[Final exam]{Final exam}
+
+\date{\today} 
+\maketitle 
+
+We showed in class that a splitting field for a separable polynomial always gives a Galois extension, so this gives a nice way to construct Galois extensions.  We already pointed out in class that $\mathbb{Q}(\sqrt{2},i)/\mathbb{Q}$ is a Galois extension by counting the number of automorphisms in ${\rm Aut}(\mathbb{Q}(\sqrt{2},i)/\mathbb{Q})$.  The goal of the following problem is to show that $\mathbb{Q}(\sqrt{2},i)$ is also a splitting field for some polynomial.  This gives another proof that $\mathbb{Q}(\sqrt{2},i)/\mathbb{Q}$ is a Galois extension.
+\begin{problem}
+\hspace{1cm}
+\begin{enumerate}
+\item Show that $\mathbb{Q}(\sqrt{2},i) = \mathbb{Q}(\sqrt{2} + i)$.
+\item Find ${\rm min}_{\mathbb{Q}}(\sqrt{2} + i)$.
+\item Show that $\mathbb{Q}(\sqrt{2},i)$ is a splitting field for ${\rm min}_{\mathbb{Q}}(\sqrt{2}+i)$.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}
+We pointed out in class that $\mathbb{Q}(\sqrt[3]{2},\zeta_{3})$ is a splitting field for $T^{3} - 2$, and thus it is a Galois extension of $\mathbb{Q}$.  We also explained that $[\mathbb{Q}(\sqrt[3]{2},\zeta_{3}):\mathbb{Q}]=6$, and therefore it follows that ${\rm Gal}(\mathbb{Q}(\sqrt[3]{2},\zeta_{3})/\mathbb{Q})$ is a finite group with cardinality $6$.
+\begin{enumerate}
+\item As we pointed out in class, a Galois automorphism is uniquely determined by what it does on the generators $\sqrt[3]{2}$ and $\zeta_{3}$.  For instance, one of the Galois automorphisms is given by
+$$r_{1}: \sqrt[3]{2} \mapsto \zeta_{3} \sqrt[3]{2} \text{ and } \zeta_{3} \mapsto \zeta_{3}. $$
+List all of the remaining Galois automorphisms using a notation similar to the one for $r_{1}$ above.
+\item In the previous question, you should have listed $6$ of them.  Calculate their order and show your work.
+\item In the previous question, you should have gotten one automorphism of order one, three of order two and two of order three.  Call the order three ones $r_{1}, r_{2}$ and the order two ones $s_{1}, s_{2}, s_{3}$.  Call the identity simply $1$.  Determine the multiplication table of ${\rm Gal}(\mathbb{Q}(\sqrt[3]{2},\zeta_{3})/\mathbb{Q}) = \{1, r_{1}, r_{2}, s_{1}, s_{2}, s_{3} \}$.
+\item Is ${\rm Gal}(\mathbb{Q}(\sqrt[3]{2},\zeta_{3})/\mathbb{Q})$ abelian?  What well-known group of small cardinality is it isomorphic to???
+\item Although we haven't proved that yet, we pointed out in class the Galois correspondence for finite Galois extensions.  You are now going to play with this a bit.  First, list all the subgroups of ${\rm Gal}(\mathbb{Q}(\sqrt[3]{2},\zeta_{3})/\mathbb{Q}) = \{1, r_{1}, r_{2}, s_{1}, s_{2}, s_{3} \}$ and compare with what you did on the first problem of Homework one.
+\item For each of the subgroup $H$ you found above, find the fixed field $\mathbb{Q}(\sqrt[3]{2},\zeta_{3})^{H}$.  Describe these fixed fields explicitly using generators.
+\item How many intermediate extensions of $\mathbb{Q}(\sqrt[3]{2},\zeta_{3})/\mathbb{Q}$ do you have an why??
+\end{enumerate}
+
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+
+
+
+
+
+
+
+
+\end{document} 
+
+
+
